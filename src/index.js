@@ -1,11 +1,18 @@
 import React from 'react'
 import ReactDom from 'react-dom'
-function App(props){
-    return(
-        <button onClick={()=>alert('Hello you!')}>
-            click me!
-        </button>
-    )
+class App extends React.Component{
+    showMassage(msg){
+        alert(msg);
+    }
+    render(){
+        return(
+            <button onClick={() => this.showMassage('Hello you!')}>
+                click me!
+            </button>
+
+            )
+}
+
 }
 ReactDom.render(
     <App />,
